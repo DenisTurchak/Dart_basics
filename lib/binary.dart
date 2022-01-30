@@ -4,8 +4,10 @@ decimalToBinary(number) {
 }
 
 getString(text) {
-  text = text.replaceAll(new RegExp(r'[^0-9]'), '');
-  List<String> list = text.split('');
-
-  return list;
+  if (text is String) {
+    text = text.replaceAll(RegExp(r'[^0-9]'), '');
+    List<String> list = text.split('');
+    return list;
+  }
+  throw ArgumentError('Text is not String');
 }
