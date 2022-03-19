@@ -1,8 +1,9 @@
-//integer convert to binary
+//2
 decimalToBinary(number) {
   return number.toRadixString(2);
 }
 
+//3
 getString(text) {
   if (text is String) {
     text = text.replaceAll(RegExp(r'[^0-9]'), '');
@@ -12,24 +13,37 @@ getString(text) {
   throw ArgumentError('Text is not String');
 }
 
+//1
 delimetersCalculator(int number1, int number2) {
-  print("НОД $number1 и $number2 = ${number1.gcd(number2)}");
+  int nod = number1.gcd(number2);
+
+  print("НОД $number1 и $number2 = $nod");
+
+  double noc = (number1 * number2) / nod;
+  print("НОК $noc");
 }
 
+final Map<String, int> mapList = {};
+
+//4
 mapData() {
- const List words = [
-    'Слово один',
-    'Слово два',
-    'Слово три',
-    'Слово четыре',
-    'Слово четыре',
-    'Слово пять',
-    'Слово пять',
-    'Слово пять',
+  List words = [
+    'один',
+    'два',
+    'три',
+    'четыре',
+    'четыре',
+    'пять',
+    'пять',
+    'пять',
   ];
 
-  final map = <String, int>{};
-
-  //перебрать массив и посчитать сколько раз слово появляется в массиве
-  
+  for (int i = 0; i < words.length; i++) {
+    if (mapList.containsKey(words.elementAt(i))) {
+      mapList.update(words.elementAt(i), (value) => value + 1);
+    } else {
+      mapList.addAll({words.elementAt(i): 1});
+    }
+  }
+  print('Map collection = $mapList');
 }
