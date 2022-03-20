@@ -5,4 +5,5 @@ void main() {
   print(decimalToBinary(32)); //2
   print('String: ${getString('fnjdsa fdjs a 32e32 432 4234 ')}'); //3
   mapData(); //4
+  getNumber(); //5
 }

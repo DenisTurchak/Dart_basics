@@ -47,3 +47,64 @@ mapData() {
   }
   print('Map collection = $mapList');
 }
+
+//5
+List listWords = [
+  'zero',
+  'one',
+  'two',
+  'three',
+  'three'
+      'cat',
+  'dog',
+  'four',
+  'five',
+  'parrot',
+];
+
+var resultNumbers = <int>{};
+getNumber() {
+  for (var item in listWords) {
+    if (item == 'zero') {
+      item = 0;
+      resultNumbers.add(item);
+    }
+    if (item == 'one') {
+      item = 1.toInt();
+      resultNumbers.add(item);
+    }
+    if (item == 'two') {
+      item = 2.toInt();
+      resultNumbers.add(item);
+    }
+    if (item == 'three') {
+      item = 3.toInt();
+      resultNumbers.add(item);
+    }
+    if (item == 'four') {
+      item = 4.toInt();
+      resultNumbers.add(item);
+    }
+    if (item == 'five') {
+      item = 5.toInt();
+      resultNumbers.add(item);
+    }
+    if (item == 'six') {
+      item = 6.toInt();
+      resultNumbers.add(item);
+    }
+    if (item == 'seven') {
+      item = 7.toInt();
+      resultNumbers.add(item);
+    }
+    if (item == 'eight') {
+      item = 8.toInt();
+      resultNumbers.add(item);
+    }
+    if (item == 'nine') {
+      item = 9.toInt();
+      resultNumbers.add(item);
+    }
+  }
+  print(resultNumbers);
+}
