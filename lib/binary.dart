@@ -1,9 +1,33 @@
-//2
-decimalToBinary(number) {
-  return number.toRadixString(2);
+//1 Вычисления НОД и НОК целых чисел
+class DelimetersCalculator {
+  final int number1;
+  final int number2;
+
+  DelimetersCalculator(this.number1, this.number2);
+
+  nodAndNok() {
+    int nod = number1.gcd(number2);
+
+    print("НОД $number1 и $number2 = $nod");
+
+    double noc = (number1 * number2) / nod;
+    print("НОК $noc");
+  }
 }
 
-//3
+//2 преобразования целых чисел из десятичной системы в двоичную и обратно
+decimalToBinary(int number) {
+  print('$number в двоичной системе: ${number.toRadixString(2)}');
+}
+
+//2.1 преобразования целых чисел из вдоичной системы в десятичную
+binaryTodecimal(int numberBinary) {
+  print(
+      '$numberBinary в десятичной системе: ${int.tryParse(numberBinary.toString(), radix: 2)}');
+}
+
+//3 метод, который принимает строку слов, разделённых пробелами.
+//Задача — найти в данной строке числа и вернуть коллекцию num этих чисел.
 getString(text) {
   if (text is String) {
     text = text.replaceAll(RegExp(r'[^0-9]'), '');
@@ -13,19 +37,11 @@ getString(text) {
   throw ArgumentError('Text is not String');
 }
 
-//1
-delimetersCalculator(int number1, int number2) {
-  int nod = number1.gcd(number2);
-
-  print("НОД $number1 и $number2 = $nod");
-
-  double noc = (number1 * number2) / nod;
-  print("НОК $noc");
-}
+//4 метод, возвращающий Map.
+//Данный Map должен соотносить слово и количество его вхождений в
+//данную коллекцию.
 
 final Map<String, int> mapList = {};
-
-//4
 mapData() {
   List words = [
     'один',
@@ -48,7 +64,7 @@ mapData() {
   print('Map collection = $mapList');
 }
 
-//5
+//5 метод, возвращающий цифры без повторений, которые встречаются в данной строке.
 List listWords = [
   'zero',
   'one',
