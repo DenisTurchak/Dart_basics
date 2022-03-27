@@ -1,4 +1,4 @@
-import 'package:dart_application_2_6/binary.dart';
+import '../lib/binary.dart';
 
 void main() {
   DelimetersCalculator(30, 12).nodAndNok(); //1
